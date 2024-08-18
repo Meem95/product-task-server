@@ -30,7 +30,10 @@ async function run() {
 
 
     const productsCollection = client.db("job-task").collection("products");
-   
+    app.get('/products', async (req, res)=>{
+        const results = await productsCollection.find().toArray();
+        res.send(results)
+    })
 
 
 
