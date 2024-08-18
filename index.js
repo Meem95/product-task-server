@@ -29,7 +29,9 @@ async function run() {
     await client.connect();
 
 
+    const productsCollection = client.db("job-task").collection("products");
    
+
 
 
     // Send a ping to confirm a successful connection
